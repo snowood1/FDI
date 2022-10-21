@@ -1,3 +1,5 @@
+# We use mask_arg0=0.05 to extract ngrams or sentences. The overall token masked rate will be about 15%.
+
 # CS
 
 python create_ilm_examples.py train ../data/char_masks/cs_clean \
