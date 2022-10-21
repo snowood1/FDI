@@ -1,3 +1,5 @@
+# The code here is modified from
+
 from collections import Counter
 import os
 import random
@@ -46,11 +48,11 @@ def randomly_mask_document(
                 mask = tuple(masker.mask(doc,
                                          mask_document_p=0,
                                          mask_paragraph_p=0,
-                                         mask_sentence_p=None,  # will be p
+                                         mask_sentence_p=None,  # will be p   # We revise the original implementation to only extract ngrams and sentences.
                                          mask_word_p=None, #  # will be p
                                          mask_word_ngram_p=0.5,
                                          mask_word_ngram_max_length=8
-                                        ))  # TODO
+                                        )) 
 
             except Exception as e:
                 error_to_count['Mask function exception: {}'.format(str(e))] += 1
