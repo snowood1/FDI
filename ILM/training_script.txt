@@ -1,0 +1,123 @@
+# CS  text infilling
+export DATASET=cs_clean; TASK=ilm; CUDA_VISIBLE_DEVICES=0 \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=8 \
+    --eval_batch_size=4 \
+    --train_sequence_length=400 \
+    --eval_sequence_length=400 \
+    --train_batch_accumulation=2 \
+    --train_learning_rate 2e-5 \
+    --eval_max_num_examples 1024 \
+    --train_eval_secs=600 \
+    --train_summary_secs=600
+    
+# CS GPT-2    
+export DATASET=cs_clean; TASK=lm; CUDA_VISIBLE_DEVICES=0 \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=8 \
+    --eval_batch_size=4 \
+    --train_sequence_length=400 \
+    --eval_sequence_length=400 \
+    --train_batch_accumulation=2 \
+    --train_learning_rate 2e-5 \
+    --eval_max_num_examples 1024 \
+    --train_eval_secs=600 \
+    --train_summary_secs=600
+        
+# WSJ  text infilling  
+export DATASET=wsj_clean; TASK=ilm; CUDA_VISIBLE_DEVICES=0 \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=4 \
+    --eval_batch_size=4 \
+    --train_sequence_length=512 \
+    --eval_sequence_length=512 \
+    --train_batch_accumulation=4 \
+    --train_learning_rate 2e-5 \
+    --eval_max_num_examples 1024 \
+    --train_eval_secs=600 \
+    --train_summary_secs=600
+
+# WSJ  GPT-2  
+export DATASET=wsj_clean; TASK=lm; CUDA_VISIBLE_DEVICES=0 \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=4 \
+    --eval_batch_size=4 \
+    --train_sequence_length=512 \
+    --eval_sequence_length=512 \
+    --train_batch_accumulation=4 \
+    --train_learning_rate 2e-5 \
+    --eval_max_num_examples 1024 \
+    --train_eval_secs=600 \
+    --train_summary_secs=600
+
+# Patent  text infilling  
+export DATASET=patent; TASK=ilm; CUDA_VISIBLE_DEVICES=0  \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=16 \
+    --eval_batch_size=4 \
+    --train_sequence_length=256 \
+    --eval_sequence_length=256 \
+    --train_batch_accumulation=2 \
+    --train_skip_naive_incomplete \
+    --eval_skip_naive_incomplete \
+    --train_learning_rate 2e-5
+    
+# Patent  GPT-2  
+export DATASET=patent; TASK=lm; CUDA_VISIBLE_DEVICES=0  \
+python train_ilm.py \
+    ${DATASET}_${TASK} \
+    ../model/${DATASET}_${TASK} \
+    ../data/char_masks/${DATASET} \
+    --wandb  --wandb_project_name ${DATASET}_${TASK} \
+    --task ${TASK} \
+    --seed 42 \
+    --train_examples_tag train \
+    --eval_examples_tag valid \
+    --train_batch_size=16 \
+    --eval_batch_size=4 \
+    --train_sequence_length=256 \
+    --eval_sequence_length=256 \
+    --train_batch_accumulation=2 \
+    --train_skip_naive_incomplete \
+    --eval_skip_naive_incomplete \
+    --train_learning_rate 2e-5
