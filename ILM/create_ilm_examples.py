@@ -1,4 +1,5 @@
-# The code here is modified from
+# https://github.com/chrisdonahue/ilm/blob/master/create_ilm_examples.py
+# We modify the original code to only extract ngrams and sentences with a probablity mask_arg0.
 
 from collections import Counter
 import os
@@ -45,11 +46,12 @@ def randomly_mask_document(
         num_retries = 0
         while num_retries < max_num_retries and mask is None:
             try:
+                # We revise the original implementation to only extract ngrams and sentences.
                 mask = tuple(masker.mask(doc,
                                          mask_document_p=0,
                                          mask_paragraph_p=0,
-                                         mask_sentence_p=None,  # will be p   # We revise the original implementation to only extract ngrams and sentences.
-                                         mask_word_p=None, #  # will be p
+                                         mask_sentence_p=None,  # will be mask_arg0  
+                                         mask_word_p=None,      # will be mask_arg0
                                          mask_word_ngram_p=0.5,
                                          mask_word_ngram_max_length=8
                                         )) 
