@@ -1,6 +1,6 @@
 # Fake Document Infilling (FDI)
 
-This repository contains the essential code for the paper [Controllable Fake Document Infilling for Cyber Deception (Findings of EMNLP 2022)](https://arxiv.org/abs/2210.09917). 
+This repository contains the essential code for the paper [Controllable Fake Document Infilling for Cyber Deception (Findings of EMNLP 2022)](https://aclanthology.org/2022.findings-emnlp.486/). 
 
 FDI is a controllable text-infilling model to generate realisitc fake copies of critical documents with moderate modification to protect the essential information and deceive adversaries.
 
@@ -44,9 +44,18 @@ FDI is a controllable text-infilling model to generate realisitc fake copies of 
 
 If you find this repo useful in your research, please consider citing:
 
-    @article{Hu2022ControllableFD,
-      title={Controllable Fake Document Infilling for Cyber Deception},
-      author={Yibo Hu and Yu Lin and Eric Parolin and Latif Khan and Kevin W. Hamlen},
-      journal={arXiv preprint arXiv:2210.09917},
-      year={2022}
-    }
+      @inproceedings{hu-etal-2022-controllable,
+          title = "Controllable Fake Document Infilling for Cyber Deception",
+          author = "Hu, Yibo  and
+            Lin, Yu  and
+            Skorupa Parolin, Erick  and
+            Khan, Latifur  and
+            Hamlen, Kevin",
+          booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
+          month = dec,
+          year = "2022",
+          address = "Abu Dhabi, United Arab Emirates",
+          publisher = "Association for Computational Linguistics",
+          url = "https://aclanthology.org/2022.findings-emnlp.486",
+          pages = "6505--6519"}
+
