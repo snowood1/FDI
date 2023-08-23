@@ -44,15 +44,11 @@ FDI is a controllable text-infilling model to generate realisitc fake copies of 
 
 If you find this repo useful in your research, please consider citing:
 
-      @inproceedings{hu-etal-2022-controllable,
-          title = "Controllable Fake Document Infilling for Cyber Deception",
-          author = "Hu, Yibo and Lin, Yu and Skorupa Parolin, Erick and Khan, Latifur and Hamlen, Kevin",
-          booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
-          month = dec,
-          year = "2022",
-          address = "Abu Dhabi, United Arab Emirates",
-          publisher = "Association for Computational Linguistics",
-          url = "https://aclanthology.org/2022.findings-emnlp.486",
-          pages = "6505--6519"
-       }
+      @inproceedings{hu2022controllable,
+        title={Controllable Fake Document Infilling for Cyber Deception},
+        author={Hu, Yibo and Lin, Yu and Parolin, Erick Skorupa and Khan, Latifur and Hamlen, Kevin},
+        booktitle={Findings of the Association for Computational Linguistics: EMNLP 2022},
+        pages={6505--6519},
+        year={2022}
+      }
 
